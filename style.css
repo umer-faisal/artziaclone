@@ -601,22 +601,454 @@ header a {
     text-align: left;
 }
 
-@media (max-width: 800px) {
-  .color{
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    
+/* Responsive Design */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+    padding: 15px;
   }
-
- .grid{
-  display: flex;
-  flex-wrap: wrap;
- }
-
- .footer-section{
-  height: 545px;
-  width: 125%;
- }
   
+  .nft-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 95%;
+  }
+  
+  .top-collection {
+    width: 95%;
+    max-width: 95%;
+  }
+  
+  .banner h1 {
+    font-size: 2em;
+  }
+  
+  .banner input[type="text"] {
+    width: 70%;
+  }
+  
+  .stats .numbers {
+    gap: 30px;
+  }
+  
+  .steps-container {
+    gap: 20px;
+  }
+  
+  .step {
+    max-width: 200px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logoimg {
+    margin-left: 0;
+    size: 40px;
+  }
+  
+  .header-right {
+    gap: 10px;
+  }
+  
+  header a {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  /* Banner */
+  .banner {
+    padding: 30px 15px;
+  }
+  
+  .banner h1 {
+    font-size: 1.8em;
+    line-height: 1.3;
+  }
+  
+  .banner input[type="text"] {
+    width: 90%;
+    margin: 15px auto;
+  }
+  
+  .banner button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  /* Stats */
+  .stats {
+    padding: 15px;
+  }
+  
+  .stats h2 {
+    font-size: 1.5em;
+  }
+  
+  .stats .numbers {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .numbers div h3 {
+    font-size: 1.8em;
+  }
+  
+  /* NFT Cards */
+  .container {
+    padding: 15px;
+  }
+  
+  .nfth1 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .nft-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .nft-card {
+    padding: 10px;
+  }
+  
+  .nft-title {
+    font-size: 16px;
+  }
+  
+  .nft-code {
+    font-size: 12px;
+  }
+  
+  .nft-price {
+    font-size: 14px;
+  }
+  
+  .buy-button {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+  
+  /* Profile elements positioning for mobile */
+  .profile-circle {
+    width: 60px;
+    height: 60px;
+    margin-top: 120px;
+    margin-left: 60px;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    margin-top: 125px;
+    margin-left: 65px;
+  }
+  
+  .tick-background {
+    width: 18px;
+    height: 18px;
+    margin-top: 140px;
+    margin-left: 100px;
+  }
+  
+  .tick {
+    width: 7px;
+    height: 5px;
+    margin-top: 147px;
+    margin-left: 105px;
+  }
+  
+  .dollar {
+    width: 15px;
+    height: 15px;
+    margin-top: -25px;
+    padding-left: 140px;
+  }
+  
+  /* Top Collections */
+  .top-collection {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .top-collection h1 {
+    font-size: 1.5em;
+  }
+  
+  .table {
+    font-size: 14px;
+  }
+  
+  .table th, .table td {
+    padding: 8px 5px;
+  }
+  
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* Third Section Grid */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .card-image {
+    height: 150px;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 14px;
+  }
+  
+  .details {
+    font-size: 12px;
+  }
+  
+  .timer {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  
+  /* Footer Section */
+  .footer-section {
+    height: auto;
+    padding: 20px 15px;
+  }
+  
+  .footer-h1 {
+    font-size: 1.8em;
+    line-height: 1.3;
+    margin-left: 15px;
+    padding-top: 15px;
+  }
+  
+  .steps-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .step {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .step h3 {
+    font-size: 16px;
+  }
+  
+  .step p {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  /* Header */
+  .logoimg {
+    size: 35px;
+  }
+  
+  .header-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Banner */
+  .banner h1 {
+    font-size: 1.5em;
+  }
+  
+  .banner input[type="text"] {
+    width: 95%;
+    font-size: 14px;
+  }
+  
+  /* NFT Cards */
+  .nft-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .nft-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Grid */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Table */
+  .table {
+    font-size: 12px;
+  }
+  
+  .table th, .table td {
+    padding: 5px 3px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Footer */
+  .footer-h1 {
+    font-size: 1.5em;
+  }
+  
+  .step-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .banner {
+    padding: 20px 15px;
+  }
+  
+  .banner h1 {
+    font-size: 1.6em;
+  }
+  
+  .stats .numbers {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .steps-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .nft-card img,
+  .card-image img,
+  .icon {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (max-width: 768px) {
+  /* Make buttons and interactive elements easier to tap */
+  header a,
+  .banner button,
+  .buy-button {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improve card hover effects for touch devices */
+  .nft-card:hover,
+  .card:hover {
+    transform: none;
+  }
+  
+  /* Add active states for touch feedback */
+  .nft-card:active,
+  .card:active {
+    transform: scale(0.98);
+  }
+  
+  /* Improve table readability on mobile */
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  /* Better spacing for mobile */
+  .container,
+  .top-collection,
+  .grid {
+    margin: 10px auto;
+  }
+  
+  /* Improve banner spacing */
+  .banner p {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+}
+
+/* Additional improvements for very small screens */
+@media (max-width: 360px) {
+  .banner h1 {
+    font-size: 1.3em;
+  }
+  
+  .stats h2 {
+    font-size: 1.3em;
+  }
+  
+  .nfth1,
+  .top-collection h1,
+  .footer-h1 {
+    font-size: 1.3em;
+  }
+  
+  .nft-card,
+  .card {
+    max-width: 250px;
+  }
+  
+  .banner input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Ensure proper viewport behavior */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .color {
+    overflow-x: hidden;
+  }
 }
